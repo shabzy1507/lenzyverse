@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Titillium Web", sans-serif;
+}
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #000;
+}
+.nav-header div {
+  width: 8rem;
+}
+.nav-bar {
+  display: flex;
+  gap: 3rem;
+}
+.menu-list {
+  list-style-type: none;
+  display: flex;
+  gap: 3rem;
+  height: 9rem;
+  align-items: center;
+}
+.menu-list a:link,
+.menu-list a:visited {
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  transition: all 0.7s;
+  font-weight: 700;
+}
+.menu-list a:hover,
+.menu-list a:active {
+  color: rgb(116, 65, 65);
+}
+.menu-list a::before,
+.menu-list a::after {
+  content: "";
+  position: absolute;
+  height: 0.3rem;
+  width: 0;
+  background-color: red;
+  transition: 0.7s;
+}
+.menu-list a::after {
+  left: 0;
+  bottom: -10px;
+}
+.menu-list a::before {
+  right: 0;
+  top: -10px;
+}
+.menu-list a:hover::after,
+.menu-list a:hover::before {
+  width: 100%;
+}
+.btn-mobile-nav {
+  background-color: #000;
+  cursor: pointer;
+}
+.icon-mobile-nav {
+  color: #fff;
+  font-size: 1.8rem;
+  margin-right: 2rem;
+}
+.hidden {
+  display: none;
+}
